@@ -1,6 +1,6 @@
 / Add , html: { multipart: true } form image uploading.
 
-= simple_form_for @pin do |f|
+= simple_form_for @pin, :html => { :multipart => true } do |f|
 	- if @pin.errors.any?
 		#errors
 			%h2
@@ -14,5 +14,7 @@
 
 	.form-group
 		= f.input :description, input_html: {class: 'form-control'}
+	.form-group
+		= f.file_field :image, input_html: {class: 'form-control'}
 		
 	= f.button :submit, class: "btn btn-primary"
