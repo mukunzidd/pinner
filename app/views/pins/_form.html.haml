@@ -9,12 +9,17 @@
 			%ul
 				- @pin.errors.full_messages.each do |msg|
 					%li= msg
+
 	.form-group
 		= f.input :title, input_html: {class: 'form-control'}
 
 	.form-group
-		= f.input :description, input_html: {class: 'form-control'}
+		%span#pin_image
+		%strong Add Image 
+		%br/
+		= f.file_field :image, input_html: { class: 'form-control' }
+
 	.form-group
-		= f.file_field :image, input_html: {class: 'form-control'}
-		
+		= f.input :description, input_html: {class: 'form-control'}
+
 	= f.button :submit, class: "btn btn-primary"
