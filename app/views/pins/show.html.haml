@@ -1,5 +1,10 @@
 %h1 Showing One Pin
-%p= @pin.title
+%br/
+%h2= @pin.title
+%p
+Submitted by
+= @pin.user.email
+%br/
 %p= @pin.description
 
 = link_to 'Home', root_path
