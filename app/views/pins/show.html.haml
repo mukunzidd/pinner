@@ -1,0 +1,9 @@
+%h1 Showing One Pin
+%p= @pin.title
+%p= @pin.description
+
+= link_to 'Home', root_path
+| 
+= link_to 'Edit', edit_pin_path
+| 
+= link_to 'Delete', pin_path, method: :delete, data: { confirm: 'Are you for real?' }
