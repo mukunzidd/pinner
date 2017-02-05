@@ -1,6 +1,7 @@
-.col-md-7.col-md-offset-3
-	%h1 Editing A Pin
-
-	= image_tag @pin.image.url(:medium)
-	= render 'form'
-	= link_to 'Cancel', pin_path(@pin)
+#edit-page.row
+	.col-md-7.col-md-offset-3
+		%h1 Editing A Pin
+		.current-image
+			= image_tag @pin.image.url(:medium)
+		= render 'form'
+		= link_to 'Cancel', pin_path(@pin)
