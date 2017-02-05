@@ -1,5 +1,3 @@
-%h1 All Pins
-%span= link_to 'New Pin', new_pin_path
 %br/
 - @pins.each do |pin|
 	%h2= link_to pin.title, pin
